@@ -1,0 +1,476 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+ 
+  height: 100vh;
+  margin: 0;
+ 
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 9999;
+  background-color: rgb(230, 214, 193);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header.navbar-container .logo {
+  display: flex;
+  flex-direction: row; /* Stack the logo and text vertically */
+  align-items: center;
+}
+
+
+header.navbar-container .logo img {
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+
+header.navbar-container .logo-text {
+  font-family: "Agu Display", serif;
+  font-size: 2rem;
+  color: #333; /* Adjust color as needed */ /* Space between logo and text */
+  font-weight: 200;
+}
+
+header.navbar-container .logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown menu */
+header.navbar-container .nav-list .dropdown {
+  position: relative;
+}
+
+header.navbar-container .nav-list .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+  display: none;
+}
+
+header.navbar-container .nav-list .dropdown-menu li {
+  text-align: left;
+}
+
+header.navbar-container .nav-list .dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+header.navbar-container .nav-list .dropdown-menu li a:hover {
+  background-color: burlywood;
+  color: white;
+}
+
+/* Show the dropdown menu when active */
+header.navbar-container .nav-list .dropdown-menu.active {
+  display: block;
+}
+
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li a:hover {
+  background-color: burlywood;
+  color: white;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+main .content {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+main .content .content-description {
+  flex: 3;
+  background-color: rgb(237, 233, 227);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main .content .content-description .title {
+  margin-block: 1rem;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+
+main .content .content-description p {
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  text-align: justify;
+  color: #666;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+  background-color: burlywood;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid burlywood;
+  background-color: transparent;
+  color: burlywood;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+main .content .content-image img {
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  margin-top: 200px; /* Add space from the top of the body */
+}
+
+main .content-sidebar .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: burlywood;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  width: 230px;
+}
+
+main .content-sidebar .card .content-image {
+  display: flex;
+  justify-content: center;
+}
+
+main .content-sidebar .card .content-image img {
+  width: 100px; /* Adjust image size */
+  min-width: 150px;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main .content-sidebar .card .social-media ul {
+  padding: 1rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: burlywood;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: #89b0d9;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.card h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .footer-content {
+  text-align: left;
+}
+
+footer .footer-content p {
+  margin: 0.5rem 0;
+}
+
+footer .footer-links {
+  text-align: right;
+}
+
+footer .footer-links ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer .footer-links li {
+  list-style-type: none;
+}
+
+footer .footer-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+footer .footer-links li a:hover {
+  color: #ffb600;
+}
+
+/* Medium devices (768px and below) */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+    flex-direction: column;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+
+  main .content-sidebar .card .content-image {
+    display: none;
+  }
+
+  main .content-sidebar .card {
+    display: none;
+  }
+
+  main .sosmed-only ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: burlywood;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  main aside .sosmed-only li {
+    list-style-type: none;
+  }
+  
+  main aside .sosmed-only li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.1s ease-in-out;
+  }
+
+  main aside .sosmed-only li a:hover {
+    color: #89b0d9;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+    flex-direction: column;
+  }
+
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+  }
+
+  main .content-sidebar .card .content-image {
+    display: none;
+  }
+
+  main .content-sidebar .card {
+    display: none;
+  }
+
+  main .sosmed-only ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    background-color: burlywood;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  main aside .sosmed-only li {
+    list-style-type: none;
+  }
+  
+  main aside .sosmed-only li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.1s ease-in-out;
+  }
+
+  main aside .sosmed-only li a:hover {
+    color: #89b0d9;
+  }
+
+  header.navbar-container .logo-text {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1201px) {
+  /* Hide the .sosmed-only section */
+  main .sosmed-only {
+    display: none;
+  }
+}

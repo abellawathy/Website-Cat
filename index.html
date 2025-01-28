@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kucing</title>
+
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 5.15.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="navbar-container">
+      <div class="logo">
+        <img src="img/logoKucing.jpg" alt="Kucing" />
+        <p class="logo-text">Kucing</p>
+      </div>
+      <nav class="nav-list">
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" id="menuDropdownButton">Menu</a>
+            <ul id="menuDropdown" class="dropdown-menu hidden">
+              <li><a href="#pengertian">Pengertian</a></li>
+              <li><a href="#karakteristik">Karakteristik</a></li>
+              <li><a href="#tingkahLaku">Tingkah Laku</a></li>
+              <li><a href="#ekologi">Ekologi</a></li>
+            </ul>
+          </li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#lainnya">Lainnya</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <div class="content-description">
+          <article id="pengertian" class="card">
+            <h1 class="title">Pengertian</h1>
+            <p>
+              Kucing, disebut juga sebagai kucing domestik atau kucing rumah (nama ilmiah: Felis silvestris catus atau Felis catus), adalah sejenis mamalia karnivora dari keluarga Felidae. Kata "kucing" biasanya merujuk kepada "kucing" yang telah dijinakkan, tetapi bisa juga merujuk kepada "kucing besar" seperti singa dan harimau yang juga termasuk jenis kucing.
+            </p>
+            <button>Lebih lanjut</button>
+          </article>
+
+          <article id="karakteristik" class="card">
+            <h1 class="title">Karakteristik</h1>
+            <p>
+              Kucing domestik dianggap sebagai keturunan kucing liar Felis silvestris, yang ditemukan secara alami di sebagian besar wilayah Eropa, Asia, dan Afrika, dan merupakan salah satu anggota keluarga kucing yang lebih kecil.
+            </p>
+            <button>Lebih lanjut</button>
+          </article>
+
+          <article id="tingkahLaku" class="card">
+            <h1 class="title">Tingkah Laku</h1>
+            <p>
+              Banyak orang menganggap kucing sebagai hewan yang "menyendiri". Kucing sangat sosial; perbedaan utama dalam perilaku sosial antara kucing dan anjing adalah bahwa kucing tidak memiliki strategi bertahan hidup sosial.
+            </p>
+            <button>Lebih lanjut</button>
+          </article>
+
+          <article id="ekologi" class="card">
+            <h1 class="title">Ekologi</h1>
+            <h3>Makanan</h3>
+            <p>
+              Kucing sangat terspesialisasi dalam berburu, dibandingkan dengan anggota keluarga karnivora lain seperti anjing dan beruang. Hal ini mungkin terkait dengan ketidakmampuan kucing untuk merasakan gula.
+            </p>
+            <h3>Reproduksi</h3>
+            <p>
+              Kucing betina dapat mengalami masa birahi beberapa kali dalam setahun. Kucing jantan tertarik oleh aroma urin dan suara kucing betina.
+            </p>
+            <button>Lebih lanjut</button>
+          </article>
+        </div>
+
+        <aside class="content-sidebar">
+          <div class="card">
+            <div class="content-image">
+              <img src="img/kucing2.jpg" alt="Kucing" />
+            </div>
+            <div class="social-media">
+              <ul>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <aside>
+          <div class="sosmed-only">
+            <ul>
+              <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 Kucing.com | All Rights Reserved</p>
+        <p>Follow us on our social media for updates!</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
